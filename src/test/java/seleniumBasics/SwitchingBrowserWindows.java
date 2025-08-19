@@ -1,4 +1,4 @@
-package CreatingCampaign;
+package seleniumBasics;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -13,23 +13,25 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class OpenNewCampaignForm {
+public class SwitchingBrowserWindows {
+
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("https://id-test.knorex.com/#/login");
 		
-		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(30));
 	  wait1.until(
 	        ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Enter your email']"))
 	    ).sendKeys("arti.wagh@knorex.com");
 		
 		//driver.findElement(By.xpath("//input[@placeholder=\"Enter your email\"]")).
 		
-		
 		driver.findElement(By.xpath("//input[@placeholder=\"Enter your password\"]")).sendKeys("Knorex@123");
 		
-		
+	
 		
 		driver.findElement(By.xpath("//button[@class=\"btn btn-main uppercase\"]")).click();
 		
@@ -62,7 +64,6 @@ public class OpenNewCampaignForm {
 
 	driver.findElement(By.linkText("Account_1_15_july_24")).click();
 	
-
 	Set<String> windowIds = driver.getWindowHandles();
 	
 	List<String> windowList = new ArrayList(windowIds);
@@ -70,31 +71,13 @@ public class OpenNewCampaignForm {
 	String firstWindow = windowList.get(0);
 	String secondWindow = windowList.get(1);
 
-	//System.out.println(firstWindow + " - " + secondWindow);
+	System.out.println(firstWindow + " - " + secondWindow);
 	
-	//System.out.println(driver.getTitle());
+	System.out.println(driver.getTitle());
 		
 	driver.switchTo().window(secondWindow);
-	//System.out.println(driver.getTitle());
+	System.out.println(driver.getTitle());
 	
-	
-	//(//span[@class="sc-kAzzGY dGOGxZ"])[6] = skip tutorial
-	
-	WebElement element2 = wait1.until(ExpectedConditions.visibilityOfElementLocated(
-		    By.xpath("//span[contains(text(),'Skip Tutorial')]")
-		));
-	element2.click();
-	
-	driver.findElement(By.xpath("//button[@class=\"sc-kGXeez dSzcGq sc-chPdSV biuqWp btn btn-default\"]")).click();
-	  
-	//get methods
-//	
-//	System.out.println(driver.getTitle());
-//	System.out.println(driver.getCurrentUrl());
-//	System.out.println(driver.getPageSource());
-//	System.err.println(driver.getWindowHandle());
-//	System.out.println(driver.getWindowHandles());
-//	
-//	driver.quit();
 	}
+
 }
