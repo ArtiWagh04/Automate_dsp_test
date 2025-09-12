@@ -14,7 +14,7 @@ public class HandlingAuthenticatedPopups {
 		
 		WebDriver driver = new FirefoxDriver();
 				
-		driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+		driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");  
 		
 	}
 	
