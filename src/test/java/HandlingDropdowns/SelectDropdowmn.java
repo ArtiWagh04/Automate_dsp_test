@@ -21,7 +21,7 @@ public class SelectDropdowmn {
 		WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"country\"]"));
 		
 		Select country = new Select(dropdown); 	 
-		//select option from th edropdown
+		//select option from the dropdown
 		
 		//country.selectByVisibleText("Japan");
 //country.selectByIndex(6);
