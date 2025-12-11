@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNG.DependencyMethods">
+      <class name="Patrameterization.pParamsThroughXML">
         <methods>
-          <include name="openApp"/>
-          <include name="search"/>
-          <include name="advancedSearch"/>
-          <include name="Login"/>
+          <include name="logoTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- TestNG.DependencyMethods -->
+      </class> <!-- Patrameterization.pParamsThroughXML -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
